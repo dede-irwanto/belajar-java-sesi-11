@@ -41,4 +41,13 @@ public class CreateStreamTest {
         Stream<String> streamFromArray = Arrays.stream(array);
         streamFromArray.forEach(System.out::println);
     }
+
+    @Test
+    void testCreateInfiniteStream() {
+        Stream<String> stream = Stream.generate(() -> "Programmer Zaman Now");
+        // stream.forEach(System.out::println);
+
+        Stream<Integer> iterate = Stream.iterate(1, value -> value + 1);
+        // iterate.forEach(System.out::println);
+    }
 }
